@@ -47,11 +47,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViSao)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvViSao
             // 
+            this.dgvViSao.AllowUserToResizeRows = false;
             this.dgvViSao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvViSao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvViSao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -223,11 +225,22 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Ngày nhập";
             // 
+            // btReport
+            // 
+            this.btReport.Location = new System.Drawing.Point(566, 260);
+            this.btReport.Name = "btReport";
+            this.btReport.Size = new System.Drawing.Size(75, 23);
+            this.btReport.TabIndex = 15;
+            this.btReport.Text = "Tạo report";
+            this.btReport.UseVisualStyleBackColor = true;
+            this.btReport.Click += new System.EventHandler(this.btReport_Click);
+            // 
             // frmViSao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btReport);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -273,5 +286,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenViSao;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHe;
+        private System.Windows.Forms.Button btReport;
     }
 }
